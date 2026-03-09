@@ -3,16 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Studio Legale Vincenzo Callari</title>
-  <meta name="description" content="Studio Legale Vincenzo Callari - assistenza legale in contrattualistica, diritto d'impresa, recupero crediti e condominio a Cefalù." />
+  <title>Avvocato a Cefalù | Studio Legale Vincenzo Callari</title>
+  <meta name="description" content="Studio Legale Vincenzo Callari a Cefalù. Assistenza in contrattualistica, diritto d'impresa, recupero crediti e condominio per privati, professionisti e imprese." />
   <style>
     :root {
-      --bg: #f6f3ee;
+      --bg: #f4f1eb;
       --surface: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --primary: #1f3a5f;
-      --border: #e5e7eb;
+      --surface-2: #f8f7f4;
+      --text: #1e293b;
+      --muted: #64748b;
+      --primary: #18324b;
+      --primary-2: #a67c52;
+      --border: #e2e8f0;
+      --shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
       --max: 1180px;
     }
     * { box-sizing: border-box; }
@@ -20,96 +23,259 @@
     body {
       margin: 0;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--text);
       background: var(--bg);
-      line-height: 1.6;
+      color: var(--text);
+      line-height: 1.65;
     }
     a { color: inherit; text-decoration: none; }
     .container { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
     header {
-      position: sticky; top: 0; z-index: 20;
-      backdrop-filter: blur(12px);
-      background: rgba(246, 243, 238, 0.88);
-      border-bottom: 1px solid rgba(229, 231, 235, 0.8);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(14px);
+      background: rgba(244, 241, 235, 0.9);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.9);
     }
     .nav {
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 20px; padding: 14px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      padding: 14px 0;
     }
-    .brand { font-weight: 700; letter-spacing: 0.03em; }
-    .brand small { display: block; font-weight: 500; color: var(--muted); letter-spacing: 0; }
-    nav ul { display: flex; gap: 18px; list-style: none; padding: 0; margin: 0; flex-wrap: wrap; }
-    nav a { color: var(--muted); font-size: 0.95rem; }
+    .brand {
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      color: var(--primary);
+    }
+    .brand small {
+      display: block;
+      color: var(--muted);
+      font-weight: 500;
+      letter-spacing: 0;
+      margin-top: 2px;
+    }
+    nav ul {
+      display: flex;
+      gap: 18px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: var(--muted);
+      font-size: 0.96rem;
+      font-weight: 500;
+    }
     nav a:hover { color: var(--primary); }
     .hero {
-      padding: 80px 0 56px;
-      background: linear-gradient(180deg, rgba(31,58,95,0.08), rgba(246,243,238,0));
+      padding: 78px 0 48px;
+      background:
+        radial-gradient(circle at top right, rgba(166,124,82,0.12), transparent 34%),
+        linear-gradient(180deg, rgba(24,50,75,0.08), rgba(244,241,235,0));
     }
     .hero-grid {
-      display: grid; grid-template-columns: 1.3fr 0.9fr; gap: 28px; align-items: center;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 28px;
+      align-items: center;
     }
     .eyebrow {
-      display: inline-block; padding: 8px 12px; border-radius: 999px;
-      background: rgba(31,58,95,0.08); color: var(--primary); font-size: 0.9rem; font-weight: 600;
-      margin-bottom: 16px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(24,50,75,0.08);
+      color: var(--primary);
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 18px;
     }
     h1 {
+      margin: 0 0 18px;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(2.4rem, 4vw, 4.4rem);
-      line-height: 1.08; margin: 0 0 18px;
-      color: #142438;
+      font-size: clamp(2.5rem, 4vw, 4.5rem);
+      line-height: 1.05;
+      color: #132538;
+      max-width: 11ch;
     }
-    .lead { font-size: 1.1rem; color: #374151; max-width: 60ch; }
-    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 26px; }
+    .lead {
+      font-size: 1.1rem;
+      color: #334155;
+      max-width: 60ch;
+      margin: 0 0 22px;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
     .btn {
-      display: inline-flex; align-items: center; justify-content: center;
-      padding: 14px 18px; border-radius: 14px; font-weight: 600; border: 1px solid var(--border);
-      transition: 0.2s ease; cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 18px;
+      border-radius: 14px;
+      font-weight: 700;
+      border: 1px solid var(--border);
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+      cursor: pointer;
     }
-    .btn-primary { background: var(--primary); color: white; border-color: var(--primary); }
-    .btn-primary:hover { transform: translateY(-1px); }
-    .btn-secondary { background: white; color: var(--text); }
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+    .btn-secondary {
+      background: white;
+      color: var(--text);
+    }
     .card {
-      background: var(--surface); border: 1px solid var(--border); border-radius: 24px;
-      padding: 26px; box-shadow: 0 14px 40px rgba(15, 23, 42, 0.05);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 26px;
+      box-shadow: var(--shadow);
     }
-    .hero-card h3 { margin-top: 0; color: var(--primary); }
-    .hero-card ul { padding-left: 18px; margin-bottom: 0; color: var(--muted); }
+    .hero-panel {
+      padding: 18px;
+      background: linear-gradient(180deg, #ffffff, #f8f7f4);
+    }
+    .portrait {
+      aspect-ratio: 4 / 5;
+      border-radius: 22px;
+      background:
+        linear-gradient(180deg, rgba(24,50,75,0.08), rgba(166,124,82,0.14)),
+        repeating-linear-gradient(135deg, #e8ecf1, #e8ecf1 10px, #f6f8fa 10px, #f6f8fa 20px);
+      border: 1px solid var(--border);
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      text-align: center;
+      padding: 20px;
+      font-weight: 600;
+    }
+    .quick-info {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .mini {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 14px;
+      background: rgba(255,255,255,0.9);
+    }
+    .mini strong {
+      display: block;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 28px;
+    }
+    .metric {
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.75);
+      border: 1px solid var(--border);
+      text-align: center;
+    }
+    .metric strong {
+      display: block;
+      font-size: 1.4rem;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
     section { padding: 34px 0; }
     .section-title {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(1.8rem, 3vw, 2.6rem);
       margin: 0 0 8px;
-      color: #142438;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.9rem, 3vw, 2.7rem);
+      color: #132538;
     }
-    .section-subtitle { margin: 0 0 24px; color: var(--muted); }
+    .section-subtitle {
+      margin: 0 0 24px;
+      color: var(--muted);
+      max-width: 72ch;
+    }
     .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
     .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
-    .practice h3, .why h3, .faq h3 { margin-top: 0; font-size: 1.1rem; color: var(--primary); }
+    .service h3, .method h3, .faq h3 { margin: 0 0 10px; color: var(--primary); }
     .muted { color: var(--muted); }
-    .contact-box p, .contact-box li { margin: 0 0 10px; }
-    .contact-line { font-size: 1rem; }
-    .contact-line strong { color: var(--primary); }
+    .service .link {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .feature-band {
+      padding: 8px 0 12px;
+    }
+    .feature-band .card {
+      background: linear-gradient(135deg, #18324b, #244766);
+      color: white;
+      padding: 28px;
+    }
+    .feature-band p { color: rgba(255,255,255,0.82); }
+    .quote {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.2rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+    .contact-box p { margin: 0 0 12px; }
+    .contact-box strong { color: var(--primary); }
+    .contact-cta {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 26px;
+    }
+    .contact-cta h3 { margin-top: 0; color: var(--primary); }
+    .checklist {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px;
+      display: grid;
+      gap: 10px;
+    }
+    .checklist li {
+      padding-left: 26px;
+      position: relative;
+    }
+    .checklist li::before {
+      content: "•";
+      color: var(--primary-2);
+      font-size: 1.3rem;
+      position: absolute;
+      left: 8px;
+      top: -1px;
+    }
     .footer {
       border-top: 1px solid var(--border);
       padding: 30px 0 60px;
       color: var(--muted);
       font-size: 0.95rem;
     }
-    .notice {
-      background: #fff8ea; border: 1px solid #f2dfb2; color: #7a5d21; border-radius: 18px; padding: 16px 18px;
-    }
-    form { display: grid; gap: 12px; }
-    input, textarea {
-      width: 100%; padding: 14px 15px; border: 1px solid var(--border); border-radius: 14px;
-      font: inherit; background: #fff;
-    }
-    textarea { min-height: 130px; resize: vertical; }
-    .small { font-size: 0.9rem; color: var(--muted); }
-    @media (max-width: 900px) {
-      .hero-grid, .grid-3, .grid-2 { grid-template-columns: 1fr; }
+    .footer a { color: var(--primary); }
+    @media (max-width: 940px) {
+      .hero-grid, .grid-3, .grid-2, .metrics { grid-template-columns: 1fr; }
       nav { display: none; }
-      .hero { padding-top: 48px; }
+      h1 { max-width: none; }
+      .quick-info { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -118,12 +284,12 @@
     <div class="container nav">
       <div class="brand">
         Studio Legale Vincenzo Callari
-        <small>Contrattualistica, diritto d'impresa, recupero crediti e condominio</small>
+        <small>Assistenza legale a Cefalù per privati, professionisti e imprese</small>
       </div>
       <nav>
         <ul>
           <li><a href="#studio">Lo studio</a></li>
-          <li><a href="#attivita">Aree di attività</a></li>
+          <li><a href="#servizi">Servizi</a></li>
           <li><a href="#metodo">Metodo</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#contatti">Contatti</a></li>
@@ -136,53 +302,93 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow">Avvocato a Cefalù</div>
-          <h1>Assistenza legale chiara, concreta e orientata al risultato.</h1>
-          <p class="lead">Lo Studio Legale Vincenzo Callari offre consulenza e assistenza in materia di contrattualistica, diritto d'impresa, recupero crediti e condominio, con attenzione alla strategia, ai tempi e alla comprensibilità del percorso per il cliente.</p>
+          <div class="eyebrow">Studio legale a Cefalù</div>
+          <h1>Tutela legale chiara, autorevole e concreta.</h1>
+          <p class="lead">Lo Studio Legale Vincenzo Callari offre assistenza in contrattualistica, diritto d'impresa, recupero crediti e condominio, con un approccio orientato alla strategia, alla chiarezza e alla tutela effettiva degli interessi del cliente.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#contatti">Richiedi un primo contatto</a>
-            <a class="btn btn-secondary" href="#attivita">Scopri le aree di attività</a>
+            <a class="btn btn-primary" href="#contatti">Contatta lo studio</a>
+            <a class="btn btn-secondary" href="#servizi">Scopri i servizi</a>
+          </div>
+          <div class="metrics">
+            <div class="metric"><strong>4 aree</strong><span>di attività in evidenza</span></div>
+            <div class="metric"><strong>Cefalù</strong><span>studio su appuntamento</span></div>
+            <div class="metric"><strong>Privati e imprese</strong><span>assistenza mirata</span></div>
           </div>
         </div>
-        <aside class="card hero-card">
-          <h3>Assistenza professionale per privati e imprese</h3>
-          <ul>
-            <li>Consulenza legale chiara e concreta.</li>
-            <li>Assistenza stragiudiziale e giudiziale.</li>
-            <li>Approccio orientato alla prevenzione e alla soluzione delle controversie.</li>
-            <li>Studio a Cefalù, ricevimento su appuntamento.</li>
-          </ul>
+        <aside class="card hero-panel">
+          <div class="portrait">Qui può essere inserita una tua foto professionale per rendere il sito più autorevole e personale.</div>
+          <div class="quick-info">
+            <div class="mini">
+              <strong>Studio</strong>
+              Vicolo Culotta, 3<br>Cefalù (PA)
+            </div>
+            <div class="mini">
+              <strong>Ricevimento</strong>
+              Su appuntamento<br>telefono o email
+            </div>
+          </div>
         </aside>
+      </div>
+    </section>
+
+    <section class="feature-band">
+      <div class="container">
+        <div class="card">
+          <p class="quote">Ogni incarico richiede metodo, rigore e chiarezza. Il cliente deve comprendere il problema, le opzioni disponibili e la strategia più adatta per tutelare i propri interessi.</p>
+        </div>
       </div>
     </section>
 
     <section id="studio">
       <div class="container">
         <h2 class="section-title">Lo studio</h2>
-        <p class="section-subtitle">Una presentazione essenziale, rassicurante e credibile.</p>
-        <div class="card">
-          <p>Lo Studio Legale Vincenzo Callari presta assistenza e consulenza legale con un approccio improntato a rigore tecnico, chiarezza comunicativa e attenzione concreta agli interessi del cliente. Ogni incarico viene affrontato mediante analisi preliminare della vicenda, esame della documentazione e individuazione della strategia più adeguata, sia nella fase stragiudiziale sia nell'eventuale contenzioso.</p>
-          <p>Lo studio si rivolge a privati, professionisti e imprese, con particolare attenzione alla redazione e revisione dei contratti, alla gestione dei rapporti commerciali, al recupero dei crediti e alle problematiche connesse alla vita condominiale.</p>
+        <p class="section-subtitle">Una presentazione più credibile, più umana e più convincente per chi arriva sul sito per la prima volta.</p>
+        <div class="grid-2">
+          <div class="card">
+            <p>Lo Studio Legale Vincenzo Callari presta assistenza a privati, professionisti e imprese, con particolare attenzione ai rapporti contrattuali, ai rapporti commerciali, al recupero dei crediti e alle controversie in materia condominiale.</p>
+            <p>Ogni vicenda viene affrontata partendo dall'analisi della documentazione, dalla ricostruzione del quadro giuridico e dalla definizione della strategia più efficace, sia nella fase stragiudiziale sia nell'eventuale giudizio.</p>
+          </div>
+          <div class="card">
+            <p><strong>Approccio operativo:</strong></p>
+            <p class="muted">analisi preliminare, valutazione delle alternative, chiarezza nei passaggi, attenzione ai tempi e agli obiettivi concreti del cliente.</p>
+            <p><strong>Ambito territoriale:</strong></p>
+            <p class="muted">Cefalù, provincia di Palermo e assistenza anche da remoto per attività compatibili con consulenza documentale.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="attivita">
+    <section id="servizi">
       <div class="container">
-        <h2 class="section-title">Aree di attività</h2>
-        <p class="section-subtitle">Assistenza legale mirata nei principali ambiti di operatività dello studio.</p>
-        <div class="grid-3 practice">
-          <div class="card">
+        <h2 class="section-title">Servizi principali</h2>
+        <p class="section-subtitle">Qui il visitatore deve capire subito cosa fai, per chi lavori e su quali problemi può contattarti.</p>
+        <div class="grid-3">
+          <div class="card service">
             <h3>Contrattualistica</h3>
             <p class="muted">Redazione, revisione e negoziazione di contratti commerciali, accordi preliminari, contratti di distribuzione, collaborazione e fornitura.</p>
+            <a class="link" href="#contatti">Richiedi un contatto</a>
           </div>
-          <div class="card">
+          <div class="card service">
             <h3>Diritto d'impresa</h3>
-            <p class="muted">Assistenza legale a imprese e professionisti nella gestione dei rapporti commerciali, degli inadempimenti contrattuali e delle controversie tra operatori economici.</p>
+            <p class="muted">Assistenza a imprese e professionisti nella gestione dei rapporti commerciali, negli inadempimenti e nelle controversie tra operatori economici.</p>
+            <a class="link" href="#contatti">Parliamone</a>
           </div>
-          <div class="card">
-            <h3>Recupero crediti e condominio</h3>
-            <p class="muted">Attività di recupero crediti, tutela dei diritti dei creditori, assistenza in controversie condominiali e nei rapporti tra condomini e amministratori.</p>
+          <div class="card service">
+            <h3>Recupero crediti</h3>
+            <p class="muted">Diffide, trattative, ricorsi per decreto ingiuntivo, procedure esecutive e assistenza nella tutela dei crediti commerciali e civili.</p>
+            <a class="link" href="#contatti">Chiedi una valutazione</a>
+          </div>
+        </div>
+        <div class="grid-2" style="margin-top:18px;">
+          <div class="card service">
+            <h3>Condominio</h3>
+            <p class="muted">Assistenza in controversie condominiali, rapporti tra condomini e amministratori, obbligazioni e problematiche relative alla gestione del condominio.</p>
+            <a class="link" href="#contatti">Contatta lo studio</a>
+          </div>
+          <div class="card service">
+            <h3>Perché scegliere un confronto iniziale</h3>
+            <p class="muted">Un primo contatto chiaro consente di comprendere la questione, valutare la documentazione utile e individuare il percorso più adatto per la tutela del tuo interesse.</p>
+            <a class="link" href="#contatti">Prenota un primo contatto</a>
           </div>
         </div>
       </div>
@@ -191,23 +397,23 @@
     <section id="metodo">
       <div class="container">
         <h2 class="section-title">Metodo di lavoro</h2>
-        <p class="section-subtitle">Un approccio ordinato e trasparente in ogni fase dell'incarico.</p>
-        <div class="grid-2 why">
+        <p class="section-subtitle">Una sezione semplice ma molto importante: trasmette ordine, affidabilità e senso di controllo.</p>
+        <div class="grid-2 method">
           <div class="card">
-            <h3>1. Analisi iniziale</h3>
-            <p class="muted">Esame del caso, raccolta dei documenti e inquadramento giuridico della vicenda.</p>
+            <h3>1. Analisi</h3>
+            <p class="muted">Esame del caso, della documentazione e degli obiettivi pratici da raggiungere.</p>
           </div>
           <div class="card">
             <h3>2. Strategia</h3>
-            <p class="muted">Individuazione del percorso più efficace: trattativa, diffida, negoziazione o azione giudiziale.</p>
+            <p class="muted">Valutazione del percorso più efficace: trattativa, diffida, iniziativa giudiziale o difesa in giudizio.</p>
           </div>
           <div class="card">
             <h3>3. Chiarezza</h3>
-            <p class="muted">Comunicazione comprensibile dei passaggi principali, dei tempi e degli obiettivi dell'attività difensiva.</p>
+            <p class="muted">Informazioni comprensibili su tempi, passaggi e possibili esiti dell'attività professionale.</p>
           </div>
           <div class="card">
-            <h3>4. Affidabilità</h3>
-            <p class="muted">Approccio professionale, riservato e orientato alla concretezza, nell'interesse del cliente.</p>
+            <h3>4. Tutela concreta</h3>
+            <p class="muted">Ogni attività è orientata a proteggere in modo serio e consapevole gli interessi del cliente.</p>
           </div>
         </div>
       </div>
@@ -216,23 +422,23 @@
     <section id="faq">
       <div class="container faq">
         <h2 class="section-title">Domande frequenti</h2>
-        <p class="section-subtitle">Informazioni utili per un primo contatto con lo studio.</p>
+        <p class="section-subtitle">Le FAQ aumentano la fiducia e aiutano chi visita il sito a capire subito come contattarti.</p>
         <div class="grid-2">
           <div class="card">
             <h3>Come richiedere un appuntamento?</h3>
-            <p class="muted">È possibile contattare lo studio tramite telefono, email o PEC per richiedere un appuntamento o un primo confronto sulla problematica.</p>
+            <p class="muted">Puoi contattare lo studio tramite telefono, email o PEC per richiedere un primo appuntamento o una prima valutazione della questione.</p>
           </div>
           <div class="card">
             <h3>Lo studio assiste anche imprese?</h3>
-            <p class="muted">Sì, lo studio presta assistenza anche a professionisti, attività commerciali e società, soprattutto in ambito contrattuale e commerciale.</p>
+            <p class="muted">Sì, lo studio presta assistenza anche a professionisti, attività commerciali e società, in particolare in materia contrattuale e commerciale.</p>
           </div>
           <div class="card">
             <h3>È possibile ricevere assistenza da remoto?</h3>
-            <p class="muted">Sì, per molte attività di consulenza e revisione documentale è possibile operare anche a distanza, previo invio della documentazione necessaria.</p>
+            <p class="muted">Sì, per molte attività di consulenza e revisione documentale è possibile operare anche a distanza, previo invio della documentazione utile.</p>
           </div>
           <div class="card">
-            <h3>Quali documenti è utile portare al primo incontro?</h3>
-            <p class="muted">È consigliabile portare ogni documento utile alla ricostruzione dei fatti: contratti, comunicazioni, lettere, email, fatture o verbali, a seconda del caso specifico.</p>
+            <h3>Quali documenti portare al primo incontro?</h3>
+            <p class="muted">È utile portare tutti i documenti rilevanti: contratti, comunicazioni, diffide, email, fatture, verbali o altri atti relativi alla vicenda.</p>
           </div>
         </div>
       </div>
@@ -241,27 +447,27 @@
     <section id="contatti">
       <div class="container">
         <h2 class="section-title">Contatti</h2>
-        <p class="section-subtitle">Per appuntamenti e richieste di informazioni.</p>
+        <p class="section-subtitle">Una sezione contatti più pulita e più elegante spesso funziona meglio di un modulo improvvisato.</p>
         <div class="grid-2">
           <div class="card contact-box">
-            <p class="contact-line"><strong>Telefono:</strong> +39 328 928 1558</p>
-            <p class="contact-line"><strong>Email:</strong> vincenzocallari@gmail.com</p>
-            <p class="contact-line"><strong>PEC:</strong> vincenzo.callari@cert.avvocatitermini.it</p>
-            <p class="contact-line"><strong>Studio:</strong> Vicolo Culotta, 3 – Cefalù (PA)</p>
-            <p class="contact-line"><strong>Ricevimento:</strong> Su appuntamento</p>
-            <div class="notice" style="margin-top: 18px;">
-              Prima della pubblicazione definitiva ti conviene aggiungere anche una pagina privacy e, se in futuro inserirai strumenti di tracciamento, la relativa cookie policy.
-            </div>
+            <p><strong>Telefono:</strong> +39 328 928 1558</p>
+            <p><strong>Email:</strong> vincenzocallari@gmail.com</p>
+            <p><strong>PEC:</strong> vincenzo.callari@cert.avvocatitermini.it</p>
+            <p><strong>Studio:</strong> Vicolo Culotta, 3 – Cefalù (PA)</p>
+            <p><strong>Ricevimento:</strong> su appuntamento</p>
           </div>
-          <div class="card">
-            <form>
-              <input type="text" placeholder="Nome e cognome" />
-              <input type="email" placeholder="Email" />
-              <input type="tel" placeholder="Telefono" />
-              <textarea placeholder="Scrivi qui un breve messaggio"></textarea>
-              <button type="button" class="btn btn-primary">Invia richiesta</button>
-            </form>
-            <p class="small">Versione demo: il modulo non invia ancora email. Per il momento i contatti effettivi sono quelli indicati a fianco.</p>
+          <div class="contact-cta">
+            <h3>Richiedi un primo contatto</h3>
+            <ul class="checklist">
+              <li>Telefono per appuntamenti e prime informazioni</li>
+              <li>Email per richieste e invio documentazione</li>
+              <li>PEC per comunicazioni formali</li>
+            </ul>
+            <p class="muted">Per richieste di informazioni o per fissare un appuntamento è possibile utilizzare i recapiti sopra indicati.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="mailto:vincenzocallari@gmail.com">Scrivi una email</a>
+              <a class="btn btn-secondary" href="tel:+393289281558">Chiama ora</a>
+            </div>
           </div>
         </div>
       </div>
@@ -272,9 +478,8 @@
     <div class="container">
       <p><strong>Studio Legale Vincenzo Callari</strong></p>
       <p>Vicolo Culotta, 3 – Cefalù (PA) · Email: vincenzocallari@gmail.com · PEC: vincenzo.callari@cert.avvocatitermini.it</p>
-    <p><a href="privacy.html">Privacy Policy</a></p>
+      <p><a href="privacy.html">Privacy Policy</a></p>
     </div>
   </footer>
 </body>
 </html>
-
