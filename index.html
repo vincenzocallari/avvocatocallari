@@ -7,18 +7,28 @@
   <meta name="description" content="Callari Avvocato a Cefalù. Assistenza in contrattualistica, diritto d'impresa, recupero crediti e condominio per privati, professionisti e imprese." />
   <style>
     :root {
-      --bg: #faf8f5;
-      --surface: #ffffff;
-      --surface-2: #f3efe8;
-      --text: #1f1f1f;
-      --muted: #6e6a64;
-      --primary: #222222;
-      --primary-2: #c7a46a;
-      --accent-blue: #1f3a5f;
-      --border: #e7e1d8;
-      --shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
-      --max: 1180px;
-    }
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --surface-2: #f1f4f8;
+
+  --text: #0f172a;
+  --muted: #64748b;
+
+  /* blu del logo */
+  --primary: #1f3a5f;
+
+  /* oro del logo */
+  --primary-2: #c7a46a;
+
+  /* oro scuro hover */
+  --gold-dark: #b6924f;
+
+  --border: #e5e7eb;
+
+  --shadow: 0 20px 45px rgba(0,0,0,0.08);
+
+  --max: 1180px;
+}
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -175,10 +185,14 @@
     }
 
     .btn-primary {
-      background: var(--primary);
-      color: white;
-      border-color: var(--primary);
-    }
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background: #142a47;
+}
 
     .btn-secondary {
       background: transparent;
@@ -309,7 +323,7 @@
     }
 
     .feature-band .card {
-      background: linear-gradient(135deg, #222222, #343434);
+  background: linear-gradient(135deg, #1f3a5f, #142a47);
       color: white;
       padding: 28px;
       border: 1px solid rgba(199, 164, 106, 0.22);
