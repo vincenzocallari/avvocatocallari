@@ -7,28 +7,21 @@
   <meta name="description" content="Callari Avvocato a Cefalù. Assistenza in contrattualistica, diritto d'impresa, recupero crediti e condominio per privati, professionisti e imprese." />
   <style>
     :root {
-  --bg: #f6f7f9;
-  --surface: #ffffff;
-  --surface-2: #f1f4f8;
+      --bg: #f5f7fb;
+      --surface: #ffffff;
+      --surface-2: #eef3f9;
 
-  --text: #0f172a;
-  --muted: #64748b;
+      --text: #0f172a;
+      --muted: #64748b;
 
-  /* blu del logo */
-  --primary: #1f3a5f;
+      --primary: #1f3a5f;      /* blu logo */
+      --primary-dark: #142a47; /* blu più scuro */
+      --primary-2: #c7a46a;    /* oro logo */
 
-  /* oro del logo */
-  --primary-2: #c7a46a;
-
-  /* oro scuro hover */
-  --gold-dark: #b6924f;
-
-  --border: #e5e7eb;
-
-  --shadow: 0 20px 45px rgba(0,0,0,0.08);
-
-  --max: 1180px;
-}
+      --border: #dbe3ee;
+      --shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+      --max: 1180px;
+    }
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -56,8 +49,8 @@
       top: 0;
       z-index: 30;
       backdrop-filter: blur(14px);
-      background: rgba(250, 248, 245, 0.96);
-      border-bottom: 1px solid rgba(231, 225, 216, 0.95);
+      background: rgba(255, 255, 255, 0.92);
+      border-bottom: 1px solid var(--border);
     }
 
     .nav {
@@ -76,7 +69,6 @@
       flex-shrink: 0;
     }
 
-    /* Contenitore che "ritaglia" il logo e lo fa apparire molto più grande */
     .brand-logo-wrap {
       width: 360px;
       height: 92px;
@@ -118,8 +110,8 @@
     .hero {
       padding: 88px 0 56px;
       background:
-        radial-gradient(circle at top right, rgba(199,164,106,0.10), transparent 32%),
-        linear-gradient(180deg, rgba(34,34,34,0.03), rgba(250,248,245,0));
+        radial-gradient(circle at top right, rgba(199,164,106,0.16), transparent 32%),
+        linear-gradient(180deg, rgba(31,58,95,0.08), rgba(245,247,251,0));
     }
 
     .hero-grid {
@@ -140,7 +132,7 @@
       font-size: 0.88rem;
       font-weight: 700;
       margin-bottom: 18px;
-      border: 1px solid rgba(199, 164, 106, 0.18);
+      border: 1px solid rgba(199, 164, 106, 0.22);
     }
 
     h1 {
@@ -148,14 +140,14 @@
       font-family: Georgia, "Times New Roman", serif;
       font-size: clamp(2.7rem, 4vw, 4.7rem);
       line-height: 1.02;
-      color: #181818;
+      color: var(--primary-dark);
       max-width: 12ch;
       letter-spacing: -0.02em;
     }
 
     .lead {
       font-size: 1.08rem;
-      color: #4b4b4b;
+      color: #334155;
       max-width: 58ch;
       margin: 0 0 22px;
     }
@@ -181,21 +173,21 @@
 
     .btn:hover {
       transform: translateY(-1px);
-      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.10);
     }
 
     .btn-primary {
-  background: var(--primary);
-  color: white;
-  border-color: var(--primary);
-}
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
 
-.btn-primary:hover {
-  background: #142a47;
-}
+    .btn-primary:hover {
+      background: var(--primary-dark);
+    }
 
     .btn-secondary {
-      background: transparent;
+      background: white;
       color: var(--primary);
       border-color: var(--border);
     }
@@ -210,15 +202,15 @@
 
     .hero-panel {
       padding: 18px;
-      background: linear-gradient(180deg, #ffffff, #f8f5ef);
+      background: linear-gradient(180deg, #ffffff, #f7fafe);
     }
 
     .portrait {
       aspect-ratio: 4 / 5;
       border-radius: 22px;
       background:
-        linear-gradient(180deg, rgba(34,34,34,0.03), rgba(199,164,106,0.12)),
-        repeating-linear-gradient(135deg, #f2eee8, #f2eee8 10px, #fbfaf8 10px, #fbfaf8 20px);
+        linear-gradient(180deg, rgba(31,58,95,0.05), rgba(199,164,106,0.14)),
+        repeating-linear-gradient(135deg, #eef3f9, #eef3f9 10px, #f8fbff 10px, #f8fbff 20px);
       border: 1px solid var(--border);
       display: grid;
       place-items: center;
@@ -239,7 +231,7 @@
       border: 1px solid var(--border);
       border-radius: 16px;
       padding: 14px;
-      background: rgba(255,255,255,0.9);
+      background: rgba(255,255,255,0.95);
     }
 
     .mini strong {
@@ -258,7 +250,7 @@
     .metric {
       padding: 18px;
       border-radius: 18px;
-      background: rgba(255,255,255,0.75);
+      background: rgba(255,255,255,0.78);
       border: 1px solid var(--border);
       text-align: center;
     }
@@ -278,7 +270,7 @@
       margin: 0 0 8px;
       font-family: Georgia, "Times New Roman", serif;
       font-size: clamp(1.9rem, 3vw, 2.7rem);
-      color: #181818;
+      color: var(--primary-dark);
       letter-spacing: -0.01em;
     }
 
@@ -323,14 +315,14 @@
     }
 
     .feature-band .card {
-  background: linear-gradient(135deg, #1f3a5f, #142a47);
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
       color: white;
       padding: 28px;
-      border: 1px solid rgba(199, 164, 106, 0.22);
+      border: 1px solid rgba(199, 164, 106, 0.24);
     }
 
     .feature-band p {
-      color: rgba(255,255,255,0.84);
+      color: rgba(255,255,255,0.88);
     }
 
     .quote {
@@ -387,6 +379,7 @@
       padding: 30px 0 60px;
       color: var(--muted);
       font-size: 0.95rem;
+      background: #ffffff;
     }
 
     .footer a {
