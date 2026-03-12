@@ -14,6 +14,7 @@
       --muted: #6e6a64;
       --primary: #222222;
       --primary-2: #c7a46a;
+      --accent-blue: #1f3a5f;
       --border: #e7e1d8;
       --shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
       --max: 1180px;
@@ -43,9 +44,9 @@
     header {
       position: sticky;
       top: 0;
-      z-index: 20;
+      z-index: 30;
       backdrop-filter: blur(14px);
-      background: rgba(250, 248, 245, 0.92);
+      background: rgba(250, 248, 245, 0.96);
       border-bottom: 1px solid rgba(231, 225, 216, 0.95);
     }
 
@@ -53,23 +54,34 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 18px;
+      gap: 20px;
       padding: 10px 0;
+      min-height: 110px;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 14px;
-      color: var(--primary);
       min-width: 0;
+      flex-shrink: 0;
+    }
+
+    /* Contenitore che "ritaglia" il logo e lo fa apparire molto più grande */
+    .brand-logo-wrap {
+      width: 360px;
+      height: 92px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
     }
 
     .brand img {
-  height: 160px;
-  width: auto;
-  display: block;
-}
+      display: block;
+      height: 92px;
+      width: auto;
+      transform: scale(2.15);
+      transform-origin: left center;
+    }
 
     nav ul {
       display: flex;
@@ -387,8 +399,20 @@
         grid-template-columns: 1fr;
       }
 
+      .nav {
+        min-height: 92px;
+        padding: 8px 0;
+      }
+
+      .brand-logo-wrap {
+        width: 250px;
+        height: 72px;
+      }
+
       .brand img {
-        height: 58px;
+        height: 72px;
+        transform: scale(2);
+        transform-origin: left center;
       }
     }
   </style>
@@ -397,7 +421,9 @@
   <header>
     <div class="container nav">
       <div class="brand">
-        <img src="logo-callari.png" alt="Callari Avvocato">
+        <div class="brand-logo-wrap">
+          <img src="logo-callari.png" alt="Callari Avvocato">
+        </div>
       </div>
       <nav>
         <ul>
