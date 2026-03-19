@@ -353,14 +353,15 @@
 
     .grid-2 {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 20px;
     }
 
     .grid-4 {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 18px;
+      align-items: stretch;
     }
 
     .muted {
@@ -376,6 +377,9 @@
     .service-card {
       position: relative;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
 
     .service-card::before {
@@ -389,9 +393,26 @@
     }
 
     .service-card h3 {
-      margin: 0 0 12px;
+      margin: 0 0 10px;
       color: var(--primary);
       font-size: 1.08rem;
+      line-height: 1.3;
+    }
+
+    .service-card p {
+      margin-top: 0;
+    }
+
+    .service-card .muted {
+      flex-grow: 1;
+    }
+
+    .service-subtitle {
+      margin: -2px 0 14px;
+      font-size: 0.86rem;
+      font-style: italic;
+      color: var(--muted);
+      text-align: left;
     }
 
     .service-link {
@@ -602,7 +623,7 @@
         <div class="grid-2">
           <div class="card studio-text">
             <p>Attraverso un approccio fondato su metodo, rigore e tempestività, C-LawFirm affianca aziende, professionisti e operatori economici nella gestione delle questioni giuridiche connesse all’attività d’impresa, contribuendo al perseguimento dei loro obiettivi economici e strategici.</p>
-           <p>L’assistenza è prestata sia nella fase stragiudiziale sia nell’eventuale fase contenziosa, con costante attenzione alla ricerca delle soluzioni più efficaci e coerenti con le esigenze concrete del cliente.</p>
+            <p>L’assistenza è prestata sia nella fase stragiudiziale sia nell’eventuale fase contenziosa, con costante attenzione alla ricerca delle soluzioni più efficaci e coerenti con le esigenze concrete del cliente.</p>
           </div>
 
           <div class="card studio-text">
@@ -631,25 +652,20 @@
 
           <div class="card service-card">
             <h3>Diritto Civile</h3>
-            <p class="muted">Attraverso un approccio fondato su metodo, rigore e tempestività lo studio presta assistenza legale, sia in ambito stragiudiziale che giudiziale, in materia di diritto civile, con particolare focus sulla gestione dei rapporti obbligatori e sulla tutela della proprietà e dei diritti reali.
-
+            <p class="muted">Attraverso un approccio fondato su metodo, rigore e tempestività lo studio presta assistenza legale, sia in ambito stragiudiziale che giudiziale, in materia di diritto civile, con particolare focus sulla gestione dei rapporti obbligatori e sulla tutela della proprietà e dei diritti reali.</p>
             <a class="service-link" href="#contatti">Parliamone</a>
           </div>
 
           <div class="card service-card">
             <h3>Recupero crediti</h3>
-            <p class="muted">Lo Studio offre assistenza specialistica per la salvaguardia dei diritti di credito, affiancando privati e imprese nella gestione delle posizioni deteriorate.
-
-L’attività comprende l’analisi preliminare della posizione debitoria, la predisposizione di strategie di recupero personalizzate e l’assistenza nelle fasi stragiudiziali e giudiziali.</p>
+            <p class="muted">Lo Studio offre assistenza specialistica per la salvaguardia dei diritti di credito, affiancando privati e imprese nella gestione delle posizioni deteriorate. L’attività comprende l’analisi preliminare della posizione debitoria, la predisposizione di strategie di recupero personalizzate e l’assistenza nelle fasi stragiudiziali e giudiziali.</p>
             <a class="service-link" href="#contatti">Chiedi una valutazione</a>
           </div>
 
-        <div class="card service-card">
-  <h3>Diritto di famiglia e<br>Volontaria Giurisdizione</h3>
-  <p class="subtitle">a cura dell’Avv. Ivana Santacolomba</p>
-</div>
-            <p class="muted">Lo Studio si occupa della gestione legale dei rapporti familiari e della protezione dei soggetti fragili, con un approccio orientato alla risoluzione equilibrata dei conflitti e alla tutela dei minori.
-L'attività professionale copre la disciplina della crisi coniugale e delle convivenze, la regolamentazione degli assetti patrimoniali del nucleo familiare e la tutela della prole. Lo Studio presta, inoltre, assistenza specifica nelle procedure di amministrazione di sostegno, tutele e curatele, volte alla protezione di soggetti fragili.</p>
+          <div class="card service-card">
+            <h3>Diritto di famiglia e<br>Volontaria Giurisdizione</h3>
+            <p class="service-subtitle">a cura dell’Avv. Ivana Santacolomba</p>
+            <p class="muted">Lo Studio si occupa della gestione legale dei rapporti familiari e della protezione dei soggetti fragili, con un approccio orientato alla risoluzione equilibrata dei conflitti e alla tutela dei minori. L'attività professionale copre la disciplina della crisi coniugale e delle convivenze, la regolamentazione degli assetti patrimoniali del nucleo familiare e la tutela della prole. Lo Studio presta, inoltre, assistenza specifica nelle procedure di amministrazione di sostegno, tutele e curatele, volte alla protezione di soggetti fragili.</p>
             <a class="service-link" href="#contatti">Contatta lo studio</a>
           </div>
         </div>
