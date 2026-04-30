@@ -42,7 +42,6 @@
       margin-inline: auto;
     }
 
-    /* ── ANIMATIONS ────────────────────────────────── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -53,7 +52,6 @@
     .delay-3 { animation-delay: .34s; }
     .delay-4 { animation-delay: .46s; }
 
-    /* ── HEADER ────────────────────────────────────── */
     header {
       position: sticky; top: 0; z-index: 90;
       background: rgba(255,255,255,.96);
@@ -108,57 +106,6 @@
     }
     .nav-cta:hover { background: var(--gold) !important; }
 
-    /* ── HERO ──────────────────────────────────────── */
-    .hero {
-      padding: 110px 0 90px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1fr 380px;
-      gap: 80px;
-      align-items: start;
-    }
-
-    .hero-tag {
-      display: inline-block;
-      font-size: .75rem;
-      font-weight: 700;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 28px;
-    }
-
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.4rem, 4.5vw, 4rem);
-      font-weight: 400;
-      line-height: 1.12;
-      letter-spacing: -.02em;
-      color: var(--ink);
-      margin-bottom: 28px;
-    }
-
-    .hero h1 em {
-      font-style: italic;
-      color: var(--gold);
-    }
-
-    .hero-lead {
-      font-size: 1.05rem;
-      color: var(--ink-2);
-      line-height: 1.8;
-      max-width: 52ch;
-      margin-bottom: 44px;
-    }
-
-    .hero-btns {
-      display: flex; gap: 14px; flex-wrap: wrap;
-      margin-bottom: 56px;
-    }
-
     .btn {
       display: inline-flex;
       align-items: center;
@@ -174,104 +121,19 @@
       border: none;
     }
     .btn:hover { transform: translateY(-1px); }
-
     .btn-dark  { background: var(--ink); color: #fff; }
     .btn-dark:hover { background: var(--gold); }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--ink);
-      border: 1.5px solid var(--line);
-    }
+    .btn-outline { background: transparent; color: var(--ink); border: 1.5px solid var(--line); }
     .btn-outline:hover { border-color: var(--ink); }
+    .btn-white { background: #fff; color: var(--ink); }
+    .btn-white:hover { background: var(--gold-l); }
+    .btn-gold { background: var(--gold); color: #fff; }
+    .btn-gold:hover { background: #7c6030; }
 
-    .hero-pillars {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: var(--line);
-      border: 1px solid var(--line);
-      border-radius: 6px;
-      overflow: hidden;
-    }
-    .pillar {
-      background: var(--bg-off);
-      padding: 20px 18px;
-    }
-    .pillar strong {
-      display: block;
-      font-size: .8rem;
-      font-weight: 700;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 6px;
-    }
-    .pillar span {
-      font-size: .85rem;
-      color: var(--ink-3);
-      line-height: 1.55;
-    }
-
-    /* hero aside */
-    .hero-aside {
-      position: sticky;
-      top: 96px;
-    }
-
-    .aside-card {
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    .aside-photo {
-      background: var(--bg-off);
-      aspect-ratio: 4/3;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-bottom: 1px solid var(--line);
-      padding: 24px;
-      text-align: center;
-      font-size: .875rem;
-      color: var(--ink-3);
-      line-height: 1.6;
-    }
-
-    .aside-info { padding: 0; }
-
-    .info-row {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      padding: 16px 20px;
-      border-bottom: 1px solid var(--line);
-    }
-    .info-row:last-child { border-bottom: none; }
-
-    .info-label {
-      font-size: .7rem;
-      font-weight: 700;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      color: var(--ink-3);
-      padding-top: 2px;
-      min-width: 90px;
-    }
-    .info-value {
-      font-size: .9rem;
-      color: var(--ink-2);
-      line-height: 1.5;
-    }
-    .info-value a { color: var(--gold); }
-
-    /* ── BLOCKQUOTE BAND ───────────────────────────── */
     .quote-band {
       padding: 72px 0;
       border-bottom: 1px solid var(--line);
     }
-
     .quote-band blockquote {
       font-family: 'Playfair Display', serif;
       font-style: italic;
@@ -289,19 +151,7 @@
       width: 3px;
       background: var(--gold);
     }
-    .quote-band cite {
-      display: block;
-      margin-top: 18px;
-      font-style: normal;
-      font-family: 'Lato', sans-serif;
-      font-size: .8rem;
-      font-weight: 700;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      color: var(--ink-3);
-    }
 
-    /* ── GENERIC SECTION ───────────────────────────── */
     section { padding: 80px 0; border-bottom: 1px solid var(--line); }
     section:last-of-type { border-bottom: none; }
 
@@ -313,7 +163,6 @@
       color: var(--gold);
       margin-bottom: 14px;
     }
-
     .section-title {
       font-family: 'Playfair Display', serif;
       font-size: clamp(1.8rem, 3vw, 2.8rem);
@@ -323,23 +172,19 @@
       color: var(--ink);
       margin-bottom: 14px;
     }
-
     .section-sub {
       font-size: 1rem;
       color: var(--ink-3);
       max-width: 60ch;
       line-height: 1.75;
     }
-
     .section-head { margin-bottom: 52px; }
 
-    /* ── STUDIO ────────────────────────────────────── */
     .studio-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 40px;
     }
-
     .studio-block p {
       color: var(--ink-2);
       font-size: .97rem;
@@ -349,23 +194,6 @@
     }
     .studio-block p:last-child { margin-bottom: 0; }
 
-    .studio-block strong {
-      font-weight: 700;
-      color: var(--ink);
-      font-size: .75rem;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      display: block;
-      margin-bottom: 10px;
-    }
-
-    .divider-v {
-      width: 1px;
-      background: var(--line);
-      align-self: stretch;
-    }
-
-    /* ── SERVICES ──────────────────────────────────── */
     .services-bg { background: var(--bg-off); }
 
     .services-grid {
@@ -377,46 +205,26 @@
       border-radius: 8px;
       overflow: hidden;
     }
-
     .svc {
       background: var(--bg);
       padding: 36px 32px;
       transition: background .2s var(--ease);
     }
     .svc:hover { background: #fffdf9; }
-
-    .svc-num {
-      font-size: .7rem;
-      font-weight: 700;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 16px;
-    }
-
     .svc h3 {
       font-family: 'Playfair Display', serif;
       font-size: 1.3rem;
       font-weight: 400;
       color: var(--ink);
-      margin-bottom: 6px;
+      margin-bottom: 14px;
       line-height: 1.25;
     }
-
-    .svc-sub {
-      font-size: .8rem;
-      font-style: italic;
-      color: var(--ink-3);
-      margin-bottom: 14px;
-    }
-
     .svc p {
       font-size: .9rem;
       color: var(--ink-3);
       line-height: 1.75;
       text-align: justify;
     }
-
     .svc-link {
       display: inline-block;
       margin-top: 18px;
@@ -430,23 +238,18 @@
     }
     .svc-link:hover { border-color: var(--gold); }
 
-    /* ── METHOD ────────────────────────────────────── */
     .method-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 0;
       border: 1px solid var(--line);
       border-radius: 8px;
       overflow: hidden;
     }
-
     .step {
       padding: 32px 28px;
       border-right: 1px solid var(--line);
-      position: relative;
     }
     .step:last-child { border-right: none; }
-
     .step-num {
       font-family: 'Playfair Display', serif;
       font-size: 3rem;
@@ -456,7 +259,6 @@
       margin-bottom: 16px;
       user-select: none;
     }
-
     .step h3 {
       font-size: .85rem;
       font-weight: 700;
@@ -465,22 +267,57 @@
       color: var(--ink);
       margin-bottom: 12px;
     }
+    .step p { font-size: .875rem; color: var(--ink-3); line-height: 1.7; }
 
-    .step p {
+    .pills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .pill-card {
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: border-color .2s var(--ease), transform .2s var(--ease);
+    }
+    .pill-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+    .pill-tag {
+      display: inline-block;
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 3px;
+      align-self: flex-start;
+    }
+    .pill-tag--massima   { background: #eef2ff; color: #3730a3; }
+    .pill-tag--curiosita { background: var(--gold-l); color: #7c5c1e; }
+    .pill-tag--caso      { background: #f0fdf4; color: #166534; }
+    .pill-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--ink);
+      line-height: 1.3;
+    }
+    .pill-text {
       font-size: .875rem;
       color: var(--ink-3);
-      line-height: 1.7;
+      line-height: 1.75;
+      text-align: justify;
+      flex-grow: 1;
     }
 
-    /* ── FAQ ───────────────────────────────────────── */
     .faq-list {
-      display: grid;
-      gap: 0;
       border: 1px solid var(--line);
       border-radius: 8px;
       overflow: hidden;
     }
-
     .faq-item {
       border-bottom: 1px solid var(--line);
       padding: 28px 32px;
@@ -489,7 +326,6 @@
       gap: 32px;
     }
     .faq-item:last-child { border-bottom: none; }
-
     .faq-q {
       font-family: 'Playfair Display', serif;
       font-size: 1.1rem;
@@ -497,27 +333,19 @@
       color: var(--ink);
       line-height: 1.4;
     }
+    .faq-a { font-size: .9rem; color: var(--ink-3); line-height: 1.75; }
 
-    .faq-a {
-      font-size: .9rem;
-      color: var(--ink-3);
-      line-height: 1.75;
-    }
-
-    /* ── CONTACT ───────────────────────────────────── */
     .contact-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 40px;
       align-items: start;
     }
-
     .contact-block {
       border: 1px solid var(--line);
       border-radius: 8px;
       overflow: hidden;
     }
-
     .contact-row {
       display: grid;
       grid-template-columns: 100px 1fr;
@@ -527,7 +355,6 @@
       border-bottom: 1px solid var(--line);
     }
     .contact-row:last-child { border-bottom: none; }
-
     .contact-key {
       font-size: .72rem;
       font-weight: 700;
@@ -536,10 +363,7 @@
       color: var(--ink-3);
       padding-top: 2px;
     }
-    .contact-val {
-      font-size: .95rem;
-      color: var(--ink-2);
-    }
+    .contact-val { font-size: .95rem; color: var(--ink-2); }
     .contact-val a { color: var(--gold); }
 
     .cta-box {
@@ -548,7 +372,6 @@
       padding: 40px;
       color: #fff;
     }
-
     .cta-box h3 {
       font-family: 'Playfair Display', serif;
       font-size: 1.8rem;
@@ -556,14 +379,12 @@
       line-height: 1.2;
       margin-bottom: 16px;
     }
-
     .cta-box p {
       font-size: .95rem;
       color: rgba(255,255,255,.6);
       margin-bottom: 28px;
       line-height: 1.75;
     }
-
     .cta-list {
       list-style: none;
       display: grid;
@@ -577,34 +398,15 @@
       font-size: .875rem;
       color: rgba(255,255,255,.75);
     }
-    .cta-list li::before {
-      content: '—';
-      color: var(--gold);
-      flex-shrink: 0;
-    }
-
+    .cta-list li::before { content: '—'; color: var(--gold); flex-shrink: 0; }
     .cta-btns { display: flex; gap: 12px; flex-wrap: wrap; }
 
-    .btn-white {
-      background: #fff;
-      color: var(--ink);
-    }
-    .btn-white:hover { background: var(--gold-l); }
-
-    .btn-gold {
-      background: var(--gold);
-      color: #fff;
-    }
-    .btn-gold:hover { background: #7c6030; }
-
-    /* ── FOOTER ────────────────────────────────────── */
     footer {
       background: var(--ink);
       color: rgba(255,255,255,.45);
       padding: 40px 0;
       font-size: .83rem;
     }
-
     .footer-inner {
       display: flex;
       justify-content: space-between;
@@ -612,54 +414,37 @@
       gap: 24px;
       flex-wrap: wrap;
     }
-
     .footer-brand {
       font-family: 'Playfair Display', serif;
       font-size: 1rem;
       color: rgba(255,255,255,.7);
     }
-
     .footer-links { display: flex; gap: 20px; }
     .footer-links a { color: rgba(255,255,255,.45); transition: color .2s; }
     .footer-links a:hover { color: var(--gold); }
-
     footer p { line-height: 1.75; }
 
-    /* ── RESPONSIVE ────────────────────────────────── */
     @media (max-width: 900px) {
-      .hero-grid,
-      .studio-grid,
-      .contact-grid { grid-template-columns: 1fr; }
-
-      .hero-aside { position: static; }
-      .divider-v { display: none; }
-
-      .method-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      .studio-grid, .contact-grid { grid-template-columns: 1fr; }
+      .method-grid { grid-template-columns: repeat(2, 1fr); }
       .step { border-right: none; border-bottom: 1px solid var(--line); }
       .step:nth-child(odd) { border-right: 1px solid var(--line); }
       .step:last-child { border-bottom: none; }
-
       .services-grid { grid-template-columns: 1fr; }
-
       .faq-item { grid-template-columns: 1fr; gap: 12px; }
-
-      .hero-pillars { grid-template-columns: 1fr; }
-
+      .pills-grid { grid-template-columns: repeat(2, 1fr); }
       .footer-inner { flex-direction: column; align-items: flex-start; }
     }
-
     @media (max-width: 680px) {
       .nav-links { display: none; }
       .method-grid { grid-template-columns: 1fr; }
       .step:nth-child(odd) { border-right: none; }
+      .pills-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
-<!-- ══ HEADER ════════════════════════════════════════ -->
 <header>
   <div class="wrap nav-inner">
     <div class="brand">Studio Legale <em>Callari</em></div>
@@ -668,23 +453,21 @@
         <li><a href="#studio">Studio</a></li>
         <li><a href="#servizi">Attività</a></li>
         <li><a href="#metodo">Metodo</a></li>
+        <li><a href="#lawpills">Law Pills</a></li>
         <li><a href="#contatti" class="nav-cta">Contattaci</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<!-- ══ OPENING QUOTE ══════════════════════════════════ -->
 <div class="quote-band">
   <div class="wrap">
     <blockquote class="fade-up">
       Ogni incarico richiede metodo, rigore e chiarezza. Il cliente deve comprendere il problema, le opzioni disponibili e la strategia più adatta per tutelare concretamente i propri interessi.
-
     </blockquote>
   </div>
 </div>
 
-<!-- ══ STUDIO ═════════════════════════════════════════ -->
 <section id="studio">
   <div class="wrap">
     <div class="section-head">
@@ -702,13 +485,11 @@
   </div>
 </section>
 
-<!-- ══ SERVICES ═══════════════════════════════════════ -->
 <section id="servizi" class="services-bg">
   <div class="wrap">
     <div class="section-head">
       <div class="section-label">Aree di attività</div>
       <h2 class="section-title">Cosa facciamo</h2>
-
     </div>
     <div class="services-grid">
       <div class="svc">
@@ -726,18 +507,15 @@
         <p>Lo Studio offre assistenza specialistica per la salvaguardia dei diritti di credito, affiancando privati e imprese nella gestione delle posizioni deteriorate. L'attività comprende l'analisi preliminare della posizione debitoria, la predisposizione di strategie di recupero personalizzate e l'assistenza nelle fasi stragiudiziali e giudiziali.</p>
         <a class="svc-link" href="#contatti">Chiedi una valutazione →</a>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ══ METHOD ═════════════════════════════════════════ -->
 <section id="metodo">
   <div class="wrap">
     <div class="section-head">
       <div class="section-label">Il nostro metodo</div>
       <h2 class="section-title">Come lavoriamo</h2>
-
     </div>
     <div class="method-grid">
       <div class="step">
@@ -764,7 +542,55 @@
   </div>
 </section>
 
-<!-- ══ FAQ ════════════════════════════════════════════ -->
+<section id="lawpills">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-label">Dal nostro studio</div>
+      <h2 class="section-title">Law Pills</h2>
+      <p class="section-sub">Curiosità, massime e principi giuridici in pillole.</p>
+    </div>
+    <div class="pills-grid">
+
+      <div class="pill-card">
+        <span class="pill-tag pill-tag--massima">Massima</span>
+        <h3 class="pill-title">Chi tace non sempre acconsente</h3>
+        <p class="pill-text">Nel diritto dei contratti, il silenzio non equivale ad accettazione, salvo che la legge o gli usi lo prevedano diversamente. Prima di ritenere concluso un accordo, è sempre necessario verificare che vi sia stata una manifestazione di volontà chiara ed inequivoca.</p>
+      </div>
+
+      <div class="pill-card">
+        <span class="pill-tag pill-tag--curiosita">Curiosità</span>
+        <h3 class="pill-title">Il contratto scritto non è sempre obbligatorio</h3>
+        <p class="pill-text">In Italia, la forma scritta è richiesta solo per alcune tipologie di contratti — come compravendite immobiliari o contratti di locazione ultranovennali. Per molti accordi commerciali, anche un accordo verbale è giuridicamente vincolante, seppur difficile da provare.</p>
+      </div>
+
+      <div class="pill-card">
+        <span class="pill-tag pill-tag--caso">Caso risolto</span>
+        <h3 class="pill-title">Clausola penale eccessiva? Si può ridurre</h3>
+        <p class="pill-text">In un recente incarico, il nostro studio ha ottenuto la riduzione giudiziale di una clausola penale contrattuale ritenuta manifestamente eccessiva rispetto al danno effettivamente subito. L'art. 1384 c.c. attribuisce al giudice questo potere di intervento.</p>
+      </div>
+
+      <div class="pill-card">
+        <span class="pill-tag pill-tag--massima">Massima</span>
+        <h3 class="pill-title">Il creditore ha l'obbligo di cooperare</h3>
+        <p class="pill-text">Secondo il principio di buona fede nell'esecuzione del contratto, il creditore non può aggravare inutilmente la posizione del debitore. Chi non collabora alla ricezione della prestazione può perdere il diritto agli interessi di mora.</p>
+      </div>
+
+      <div class="pill-card">
+        <span class="pill-tag pill-tag--curiosita">Curiosità</span>
+        <h3 class="pill-title">La PEC ha valore legale equiparato alla raccomandata</h3>
+        <p class="pill-text">Una comunicazione inviata tramite Posta Elettronica Certificata ha lo stesso valore probatorio di una raccomandata con ricevuta di ritorno. È lo strumento più efficace per notifiche, diffide e comunicazioni formali in ambito professionale e commerciale.</p>
+      </div>
+
+      <div class="pill-card">
+        <span class="pill-tag pill-tag--caso">Caso risolto</span>
+        <h3 class="pill-title">Recupero credito senza ricorrere al tribunale</h3>
+        <p class="pill-text">Attraverso una strategia stragiudiziale mirata — diffida formale via PEC, analisi della solvibilità del debitore e proposta di accordo transattivo — lo studio ha ottenuto il recupero integrale del credito in meno di 60 giorni, evitando costi e tempi del contenzioso.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <section id="faq" class="services-bg">
   <div class="wrap">
     <div class="section-head">
@@ -792,7 +618,6 @@
   </div>
 </section>
 
-<!-- ══ CONTACT ════════════════════════════════════════ -->
 <section id="contatti">
   <div class="wrap">
     <div class="section-head">
@@ -822,7 +647,6 @@
           <span class="contact-val">Su appuntamento</span>
         </div>
       </div>
-
       <div class="cta-box">
         <h3>Richiedi un primo contatto</h3>
         <p>Per richieste di informazioni o per fissare un appuntamento, scegli il canale più comodo.</p>
@@ -841,7 +665,6 @@
   </div>
 </section>
 
-<!-- ══ FOOTER ═════════════════════════════════════════ -->
 <footer>
   <div class="wrap footer-inner">
     <div>
