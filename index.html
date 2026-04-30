@@ -3,836 +3,594 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Studio Legale Callari | Diritto civile e commerciale</title>
-  <meta name="description" content="Studio Legale Callari: assistenza legale in diritto civile e commerciale, contrattualistica d'impresa, recupero crediti e contenzioso. Sede a Cefalù, operatività su tutto il territorio nazionale." />
+  <title>Callari Law Firm | Avvocato a Cefalù</title>
+  <meta name="description" content="Studio Legale Callari a Cefalù. Assistenza legale in contrattualistica commerciale, diritto d'impresa, recupero crediti e diritto civile." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     :root {
-      --navy: #18345f;
-      --navy-2: #223f70;
-      --gold: #c8972f;
-      --bg: #f5f6fa;
-      --card: #ffffff;
-      --text: #243249;
-      --muted: #6b7790;
-      --line: rgba(255,255,255,0.18);
-      --soft-line: rgba(24, 52, 95, 0.08);
-      --shadow: 0 18px 45px rgba(20, 41, 73, 0.08);
-      --radius: 24px;
-      --container: 1180px;
+      --ink:    #0e1117;
+      --ink-2:  #3a3f4a;
+      --ink-3:  #7a8190;
+      --gold:   #9e7c3f;
+      --gold-l: #f5ede0;
+      --line:   #e4e7ed;
+      --bg:     #ffffff;
+      --bg-off: #f8f8f6;
+      --max:    1100px;
+      --ease:   cubic-bezier(.4,0,.2,1);
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; font-size: 16px; }
 
     body {
-      margin: 0;
-      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--text);
+      font-family: 'Lato', sans-serif;
       background: var(--bg);
-      line-height: 1.65;
+      color: var(--ink);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
     }
 
     a { color: inherit; text-decoration: none; }
     img { max-width: 100%; display: block; }
 
-    .container {
-      width: min(var(--container), calc(100% - 40px));
-      margin: 0 auto;
+    .wrap {
+      width: min(var(--max), 100% - 48px);
+      margin-inline: auto;
     }
 
-    .serif {
-      font-family: Georgia, "Times New Roman", serif;
-      letter-spacing: -0.03em;
+    /* ── ANIMATIONS ────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
+    .fade-up { animation: fadeUp .7s var(--ease) both; }
+    .delay-1 { animation-delay: .1s; }
+    .delay-2 { animation-delay: .22s; }
+    .delay-3 { animation-delay: .34s; }
+    .delay-4 { animation-delay: .46s; }
 
-    .section {
-      padding: 96px 0;
-    }
-
-    .section-header {
-      max-width: 760px;
-      margin-bottom: 36px;
-    }
-
-    .section-kicker {
-      display: inline-flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 16px;
-      color: var(--gold);
-      font-size: 0.82rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .section-kicker::before {
-      content: "";
-      width: 56px;
-      height: 1px;
-      background: rgba(200, 151, 47, 0.7);
-    }
-
-    .section-header h2 {
-      margin: 0 0 12px;
-      color: var(--navy);
-      font-size: clamp(2.4rem, 4vw, 4rem);
-      line-height: 0.96;
-    }
-
-    .section-header p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 1.06rem;
-      max-width: 68ch;
-    }
-
+    /* ── HEADER ────────────────────────────────────── */
     header {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 1000;
+      position: sticky; top: 0; z-index: 90;
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
     }
 
-    .nav {
-      min-height: 104px;
+    .nav-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 28px;
+      height: 72px;
+      gap: 32px;
     }
 
     .brand {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      min-width: 250px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      letter-spacing: .01em;
+      color: var(--ink);
+      white-space: nowrap;
     }
+    .brand em { color: var(--gold); font-style: normal; }
 
-    .logo-mark {
-      width: 50px;
-      height: 50px;
-      position: relative;
-      flex: 0 0 50px;
+    .nav-links {
+      display: flex; gap: 8px;
+      list-style: none;
     }
-
-    .logo-mark::before,
-    .logo-mark::after {
-      content: "";
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    .logo-mark::before {
-      width: 32px;
-      height: 38px;
-      top: 7px;
-      background:
-        linear-gradient(to right,
-          #ffffff 0 7px,
-          transparent 7px 12px,
-          #ffffff 12px 19px,
-          transparent 19px 24px,
-          #ffffff 24px 32px);
-      border-bottom: 5px solid #ffffff;
-    }
-
-    .logo-mark::after {
-      width: 50px;
-      height: 14px;
-      top: 0;
-      border-top: 6px solid #ffffff;
-      border-radius: 999px 999px 0 0;
-    }
-
-    .logo-base {
-      position: absolute;
-      left: 50%;
-      bottom: 2px;
-      transform: translateX(-50%);
-      width: 54px;
-      height: 10px;
-      border-top: 2px solid rgba(255,255,255,0.75);
-      border-radius: 50%;
-    }
-
-    .brand-text {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-      line-height: 1;
-    }
-
-    .brand-text .name {
-      color: #ffffff;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.95rem;
-      letter-spacing: 0.03em;
+    .nav-links a {
+      padding: 8px 18px;
+      border-radius: 4px;
+      font-size: .875rem;
       font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      color: var(--ink-2);
+      transition: color .2s var(--ease), background .2s var(--ease);
     }
+    .nav-links a:hover { color: var(--ink); background: var(--bg-off); }
 
-    .brand-text .sub {
-      color: rgba(255,255,255,0.88);
-      font-size: 0.9rem;
-      font-weight: 500;
-      letter-spacing: 0.05em;
-    }
-
-    .menu {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-      color: rgba(255,255,255,0.96);
-      font-size: 0.95rem;
-      font-weight: 500;
-    }
-
-    .menu a {
-      position: relative;
-      transition: opacity 0.2s ease;
-    }
-
-    .menu a:hover { opacity: 0.78; }
-
-    .menu-cta {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 30px;
-      border-radius: 16px;
-      background: #ffffff;
-      color: var(--navy);
+    .nav-cta {
+      padding: 10px 22px;
+      border-radius: 4px;
+      background: var(--ink);
+      color: #fff !important;
+      font-size: .875rem;
       font-weight: 700;
-      box-shadow: 0 18px 34px rgba(0,0,0,0.08);
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      transition: background .2s var(--ease) !important;
+      white-space: nowrap;
     }
+    .nav-cta:hover { background: var(--gold) !important; }
 
+    /* ── HERO ──────────────────────────────────────── */
     .hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      background:
-        linear-gradient(rgba(18, 29, 48, 0.54), rgba(18, 29, 48, 0.62)),
-        url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80') center center / cover no-repeat;
-      color: #ffffff;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 120px;
-      background: linear-gradient(180deg, rgba(245,246,250,0), var(--bg));
-    }
-
-    .hero-inner {
-      position: relative;
-      z-index: 2;
-      width: 100%;
-      padding: 170px 0 120px;
+      padding: 110px 0 90px;
+      border-bottom: 1px solid var(--line);
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 48px;
-      align-items: end;
+      grid-template-columns: 1fr 380px;
+      gap: 80px;
+      align-items: start;
     }
 
-    .hero-kicker {
-      display: inline-flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 22px;
-      color: rgba(255,255,255,0.9);
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
+    .hero-tag {
+      display: inline-block;
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .14em;
       text-transform: uppercase;
-    }
-
-    .hero-kicker::before {
-      content: "";
-      width: 56px;
-      height: 1px;
-      background: rgba(255,255,255,0.75);
-    }
-
-    .hero h1 {
-      margin: 0 0 20px;
-      color: #ffffff;
-      font-size: clamp(3.5rem, 7vw, 6rem);
-      line-height: 0.93;
-      max-width: 10.5ch;
-      text-shadow: 0 12px 32px rgba(0,0,0,0.18);
-    }
-
-    .hero p.lead {
-      max-width: 760px;
-      margin: 0 0 34px;
-      color: rgba(255,255,255,0.9);
-      font-size: 1.28rem;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
+      color: var(--gold);
       margin-bottom: 28px;
     }
 
-    .btn,
-    .btn-secondary {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      border-radius: 18px;
-      padding: 16px 26px;
-      font-weight: 700;
-      transition: 0.2s ease;
-      border: 1px solid transparent;
-      cursor: pointer;
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 4.5vw, 4rem);
+      font-weight: 400;
+      line-height: 1.12;
+      letter-spacing: -.02em;
+      color: var(--ink);
+      margin-bottom: 28px;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .hero-lead {
+      font-size: 1.05rem;
+      color: var(--ink-2);
+      line-height: 1.8;
+      max-width: 52ch;
+      margin-bottom: 44px;
+    }
+
+    .hero-btns {
+      display: flex; gap: 14px; flex-wrap: wrap;
+      margin-bottom: 56px;
     }
 
     .btn {
-      background: #ffffff;
-      color: var(--navy);
-      box-shadow: 0 18px 34px rgba(0,0,0,0.12);
-    }
-
-    .btn:hover { transform: translateY(-1px); }
-
-    .btn-secondary {
-      background: transparent;
-      color: #ffffff;
-      border-color: rgba(255,255,255,0.24);
-      backdrop-filter: blur(8px);
-    }
-
-    .btn-secondary:hover { background: rgba(255,255,255,0.08); }
-
-    .hero-side {
-      display: flex;
-      justify-content: flex-end;
-    }
-
-    .hero-panel {
-      width: min(100%, 500px);
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.18);
-      border-radius: 30px;
-      padding: 18px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 24px 50px rgba(0,0,0,0.12);
-    }
-
-    .portrait {
-      min-height: 560px;
-      border-radius: 24px;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      color: rgba(255,255,255,0.88);
-      padding: 34px;
-      font-size: 1.02rem;
-      font-weight: 500;
-      border: 1px solid rgba(255,255,255,0.18);
-      background:
-        linear-gradient(135deg, rgba(255,255,255,0.10), rgba(255,255,255,0.04)),
-        repeating-linear-gradient(-45deg, rgba(255,255,255,0.04) 0 12px, rgba(255,255,255,0.01) 12px 24px);
-    }
-
-    .quick-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: -46px;
-      position: relative;
-      z-index: 3;
-    }
-
-    .quick-card,
-    .card,
-    .faq-item,
-    .contact-card,
-    .method-card,
-    .area-card {
-      background: var(--card);
-      border: 1px solid rgba(24, 52, 95, 0.08);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    .quick-card {
-      padding: 24px;
-    }
-
-    .quick-card strong {
-      display: block;
-      color: var(--navy);
-      font-size: 1.04rem;
-      margin-bottom: 8px;
-    }
-
-    .quick-card span {
-      color: var(--muted);
-      font-size: 0.97rem;
-    }
-
-    .statement {
-      background: linear-gradient(135deg, var(--navy), #10294d);
-      color: #fff;
-      border-radius: 30px;
-      padding: 42px 34px;
-      box-shadow: var(--shadow);
-    }
-
-    .statement p {
-      margin: 0;
-      max-width: 900px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(1.45rem, 2.2vw, 2rem);
-      line-height: 1.42;
-    }
-
-    .studio-grid,
-    .method-grid,
-    .faq-grid,
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
-    }
-
-    .card,
-    .method-card,
-    .faq-item,
-    .contact-card {
-      padding: 30px;
-    }
-
-    .card h3,
-    .method-card h3,
-    .faq-item h3,
-    .contact-card h3 {
-      margin: 0 0 14px;
-      color: var(--navy);
-      font-size: 1.45rem;
-    }
-
-    .card h4 {
-      margin: 26px 0 10px;
-      color: var(--navy);
-      font-size: 1.08rem;
-    }
-
-    .card p,
-    .method-card p,
-    .faq-item p,
-    .contact-card p,
-    .contact-card li {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .card p + p,
-    .faq-item p + p { margin-top: 14px; }
-
-    .areas-grid {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .area-card {
-      position: relative;
-      overflow: hidden;
-      padding: 28px 24px 24px;
-    }
-
-    .area-card::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background: linear-gradient(90deg, var(--navy), var(--gold));
-    }
-
-    .area-card h3 {
-      margin: 8px 0 12px;
-      color: var(--navy);
-      font-size: 1.15rem;
-      line-height: 1.28;
-    }
-
-    .area-card p {
-      margin: 0 0 18px;
-      color: var(--muted);
-    }
-
-    .area-link {
-      color: var(--gold);
-      font-weight: 700;
-    }
-
-    .method-card .num {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 44px;
-      height: 44px;
-      border-radius: 14px;
-      background: rgba(24, 52, 95, 0.08);
-      color: var(--navy);
-      font-weight: 800;
+      padding: 13px 28px;
+      border-radius: 4px;
+      font-size: .9rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background .2s var(--ease), color .2s var(--ease), transform .15s var(--ease);
+      border: none;
+    }
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn-dark  { background: var(--ink); color: #fff; }
+    .btn-dark:hover { background: var(--gold); }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--ink);
+      border: 1.5px solid var(--line);
+    }
+    .btn-outline:hover { border-color: var(--ink); }
+
+    .hero-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .pillar {
+      background: var(--bg-off);
+      padding: 20px 18px;
+    }
+    .pillar strong {
+      display: block;
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+    .pillar span {
+      font-size: .85rem;
+      color: var(--ink-3);
+      line-height: 1.55;
+    }
+
+    /* hero aside */
+    .hero-aside {
+      position: sticky;
+      top: 96px;
+    }
+
+    .aside-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .aside-photo {
+      background: var(--bg-off);
+      aspect-ratio: 4/3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid var(--line);
+      padding: 24px;
+      text-align: center;
+      font-size: .875rem;
+      color: var(--ink-3);
+      line-height: 1.6;
+    }
+
+    .aside-info { padding: 0; }
+
+    .info-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--line);
+    }
+    .info-row:last-child { border-bottom: none; }
+
+    .info-label {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      padding-top: 2px;
+      min-width: 90px;
+    }
+    .info-value {
+      font-size: .9rem;
+      color: var(--ink-2);
+      line-height: 1.5;
+    }
+    .info-value a { color: var(--gold); }
+
+    /* ── BLOCKQUOTE BAND ───────────────────────────── */
+    .quote-band {
+      padding: 72px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .quote-band blockquote {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      line-height: 1.5;
+      color: var(--ink);
+      max-width: 62ch;
+      position: relative;
+      padding-left: 28px;
+    }
+    .quote-band blockquote::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 8px; bottom: 8px;
+      width: 3px;
+      background: var(--gold);
+    }
+    .quote-band cite {
+      display: block;
+      margin-top: 18px;
+      font-style: normal;
+      font-family: 'Lato', sans-serif;
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+    }
+
+    /* ── GENERIC SECTION ───────────────────────────── */
+    section { padding: 80px 0; border-bottom: 1px solid var(--line); }
+    section:last-of-type { border-bottom: none; }
+
+    .section-label {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--gold);
       margin-bottom: 14px;
     }
 
-    .contact-list {
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 3vw, 2.8rem);
+      font-weight: 400;
+      line-height: 1.15;
+      letter-spacing: -.02em;
+      color: var(--ink);
+      margin-bottom: 14px;
+    }
+
+    .section-sub {
+      font-size: 1rem;
+      color: var(--ink-3);
+      max-width: 60ch;
+      line-height: 1.75;
+    }
+
+    .section-head { margin-bottom: 52px; }
+
+    /* ── STUDIO ────────────────────────────────────── */
+    .studio-grid {
       display: grid;
-      gap: 14px;
-      margin: 0;
-      padding: 0;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .studio-block p {
+      color: var(--ink-2);
+      font-size: .97rem;
+      line-height: 1.8;
+      margin-bottom: 18px;
+      text-align: justify;
+    }
+    .studio-block p:last-child { margin-bottom: 0; }
+
+    .studio-block strong {
+      font-weight: 700;
+      color: var(--ink);
+      font-size: .75rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    /* ── SERVICES ──────────────────────────────────── */
+    .services-bg { background: var(--bg-off); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .svc {
+      background: var(--bg);
+      padding: 36px 32px;
+      transition: background .2s var(--ease);
+    }
+    .svc:hover { background: #fffdf9; }
+
+    .svc-num {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .svc h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 6px;
+      line-height: 1.25;
+    }
+
+    .svc-sub {
+      font-size: .8rem;
+      font-style: italic;
+      color: var(--ink-3);
+      margin-bottom: 14px;
+    }
+
+    .svc p {
+      font-size: .9rem;
+      color: var(--ink-3);
+      line-height: 1.75;
+      text-align: justify;
+    }
+
+    .svc-link {
+      display: inline-block;
+      margin-top: 18px;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border-bottom: 1px solid transparent;
+      transition: border-color .2s;
+    }
+    .svc-link:hover { border-color: var(--gold); }
+
+    /* ── METHOD ────────────────────────────────────── */
+    .method-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .step {
+      padding: 32px 28px;
+      border-right: 1px solid var(--line);
+      position: relative;
+    }
+    .step:last-child { border-right: none; }
+
+    .step-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 400;
+      color: var(--gold-l);
+      line-height: 1;
+      margin-bottom: 16px;
+      user-select: none;
+    }
+
+    .step h3 {
+      font-size: .85rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+
+    .step p {
+      font-size: .875rem;
+      color: var(--ink-3);
+      line-height: 1.7;
+    }
+
+    /* ── FAQ ───────────────────────────────────────── */
+    .faq-list {
+      display: grid;
+      gap: 0;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--line);
+      padding: 28px 32px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    .faq-item:last-child { border-bottom: none; }
+
+    .faq-q {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: var(--ink);
+      line-height: 1.4;
+    }
+
+    .faq-a {
+      font-size: .9rem;
+      color: var(--ink-3);
+      line-height: 1.75;
+    }
+
+    /* ── CONTACT ───────────────────────────────────── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .contact-block {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .contact-row {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 16px;
+      align-items: start;
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--line);
+    }
+    .contact-row:last-child { border-bottom: none; }
+
+    .contact-key {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      padding-top: 2px;
+    }
+    .contact-val {
+      font-size: .95rem;
+      color: var(--ink-2);
+    }
+    .contact-val a { color: var(--gold); }
+
+    .cta-box {
+      background: var(--ink);
+      border-radius: 8px;
+      padding: 40px;
+      color: #fff;
+    }
+
+    .cta-box h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .cta-box p {
+      font-size: .95rem;
+      color: rgba(255,255,255,.6);
+      margin-bottom: 28px;
+      line-height: 1.75;
+    }
+
+    .cta-list {
       list-style: none;
-    }
-
-    .contact-list strong { color: var(--navy); }
-
-    .contact-actions {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-top: 24px;
-    }
-
-    footer {
-      padding: 34px 0 48px;
-      color: var(--muted);
-    }
-
-    .footer-inner {
-      border-top: 1px solid rgba(24,52,95,0.08);
-      padding-top: 24px;
       display: grid;
       gap: 10px;
+      margin-bottom: 32px;
+    }
+    .cta-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .875rem;
+      color: rgba(255,255,255,.75);
+    }
+    .cta-list li::before {
+      content: '—';
+      color: var(--gold);
+      flex-shrink: 0;
     }
 
-    .footer-inner strong { color: var(--navy); }
+    .cta-btns { display: flex; gap: 12px; flex-wrap: wrap; }
 
-    @media (max-width: 1100px) {
-      .hero-grid,
-      .quick-grid,
-      .studio-grid,
-      .areas-grid,
-      .method-grid,
-      .faq-grid,
-      .contact-grid {
-        grid-template-columns: 1fr 1fr;
-      }
+    .btn-white {
+      background: #fff;
+      color: var(--ink);
     }
+    .btn-white:hover { background: var(--gold-l); }
 
-    @media (max-width: 860px) {
-      .nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 18px 0;
-      }
-
-      .brand { justify-content: center; }
-      .menu { order: 3; width: 100%; justify-content: center; gap: 18px; flex-wrap: wrap; }
-
-      .hero {
-        min-height: auto;
-      }
-
-      .hero-inner {
-        padding: 150px 0 90px;
-      }
-
-      .hero-grid,
-      .quick-grid,
-      .studio-grid,
-      .areas-grid,
-      .method-grid,
-      .faq-grid,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero h1 { max-width: none; }
-      .portrait { min-height: 380px; }
-      .section { padding: 78px 0; }
+    .btn-gold {
+      background: var(--gold);
+      color: #fff;
     }
+    .btn-gold:hover { background: #7c6030; }
 
-    @media (max-width: 560px) {
-      .container { width: min(var(--container), calc(100% - 24px)); }
-      .hero h1 { font-size: 2.9rem; }
-      .section-header h2 { font-size: 2.35rem; }
-      .card, .method-card, .faq-item, .contact-card, .area-card, .quick-card { padding: 22px; }
-      .btn, .btn-secondary, .menu-cta { width: 100%; }
-      .hero-actions, .contact-actions { flex-direction: column; }
-      .brand-text .name { font-size: 1.65rem; }
-      .brand-text .sub { font-size: 0.82rem; }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="container nav">
-      <a class="brand" href="#top" aria-label="Studio Legale Callari">
-        <span class="logo-mark" aria-hidden="true"><span class="logo-base"></span></span>
-        <span class="brand-text">
-          <span class="name">CALLARI</span>
-          <span class="sub">Studio Legale</span>
-        </span>
-      </a>
-
-      <nav class="menu" aria-label="Navigazione principale">
-        <a href="#studio">Lo studio</a>
-        <a href="#attivita">Aree tematiche</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contatti" class="menu-cta">Contatti</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="top">
-    <section class="hero">
-      <div class="hero-inner">
-        <div class="container hero-grid">
-          <div>
-            <span class="hero-kicker">Diritto civile e commerciale</span>
-            <h1 class="serif">Studio Legale Callari</h1>
-            <p class="lead">Tutela dei diritti e assistenza all’impresa
-Consulenza legale in diritto civile e commerciale, con particolare attenzione alla contrattualistica d’impresa e alla gestione dei rapporti commerciali.
-Un approccio fondato su metodo, chiarezza e rapidità, orientato alla soluzione concreta dei problemi.</p>
-
-            <div class="hero-actions">
-              <a class="btn" href="#contatti">Richiedi una consulenza</a>
-              <a class="btn-secondary" href="#attivita">Scopri le aree tematiche</a>
-            </div>
-          </div>
-
-          <div class="hero-side">
-            <div class="hero-panel">
-              <div class="portrait">
-                In questa area può essere inserita una tua foto professionale o un’immagine istituzionale coordinata con il tono del sito.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-tight">
-      <div class="container quick-grid">
-        <div class="quick-card">
-          <strong>Contratti</strong>
-          <span>Redazione, revisione e tutela dei rapporti negoziali.</span>
-        </div>
-        <div class="quick-card">
-          <strong>Imprese</strong>
-          <span>Assistenza legale per professionisti e operatori economici.</span>
-        </div>
-        <div class="quick-card">
-          <strong>Cefalù</strong>
-          <span>Ricevimento in studio e attività su appuntamento.</span>
-        </div>
-        <div class="quick-card">
-          <strong>Operatività nazionale</strong>
-          <span>Presenza capillare presso i principali fori italiani.</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-tight">
-      <div class="container">
-        <div class="statement">
-          <p>Ogni incarico richiede metodo, rigore e chiarezza. Il cliente deve comprendere il problema, le opzioni disponibili e la strategia più adatta per tutelare concretamente i propri interessi.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="studio">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-kicker">Lo studio</span>
-          <h2 class="serif">Competenza, metodo e operatività su scala nazionale</h2>
-          <p>Una presentazione ordinata, chiara e istituzionale rafforza la percezione dello studio e valorizza i contenuti professionali.</p>
-        </div>
-
-        <div class="studio-grid">
-          <article class="card">
-            <h3 class="serif">Profilo e attività</h3>
-            <p>Lo <strong>Studio Legale Callari</strong> opera prevalentemente nel diritto civile e commerciale, con particolare focus sulla contrattualistica d’impresa e sull’assistenza alle aziende nella gestione delle problematiche legali connesse ai rapporti commerciali. Offre supporto sia nella fase di consulenza strategica sia nella gestione del contenzioso, con l’obiettivo di garantire una tutela efficace e concreta degli interessi d’impresa.</p>
-            <p>Lo studio ha sede a Cefalù e opera su tutto il territorio nazionale, avvalendosi di una rete consolidata di collaborazioni con professionisti di comprovata competenza e affidabilità, che consente di assicurare una presenza capillare e un’assistenza diretta presso i principali fori italiani.</p>
-          </article>
-
-          <article class="card">
-            <h3 class="serif">Approccio operativo</h3>
-            <p><strong>Analisi preliminare, chiarezza operativa, attenzione ai tempi e agli obiettivi concreti del cliente</strong> costituiscono i principi guida dell’attività. Ogni incarico è gestito con un approccio pragmatico, finalizzato all’individuazione della soluzione più efficace, privilegiando, ove possibile, strumenti idonei a prevenire o contenere il contenzioso e ad assicurare risultati rapidi ed efficienti.</p>
-            <h4>Ambito territoriale</h4>
-            <p>In tale prospettiva, lo Studio assicura una gestione tempestiva delle pratiche su scala nazionale, abbattendo le distanze grazie all’integrazione degli strumenti tecnologici e a una rete di partnership fiduciarie.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="attivita">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-kicker">Aree tematiche</span>
-          <h2 class="serif">Assistenza mirata per privati, professionisti e imprese</h2>
-          <p>Una struttura semplice e leggibile aiuta il visitatore a comprendere subito per quali questioni può rivolgersi allo studio.</p>
-        </div>
-
-        <div class="areas-grid">
-          <article class="area-card">
-            <h3>Contrattualistica d’impresa</h3>
-            <p>Redazione, revisione e gestione di contratti commerciali, accordi e rapporti negoziali.</p>
-            <a class="area-link" href="#contatti">Richiedi un contatto</a>
-          </article>
-
-          <article class="area-card">
-            <h3>Diritto civile</h3>
-            <p>Assistenza giudiziale e stragiudiziale in materia di obbligazioni, responsabilità e diritti reali.</p>
-            <a class="area-link" href="#contatti">Parliamone</a>
-          </article>
-
-          <article class="area-card">
-            <h3>Recupero crediti</h3>
-            <p>Analisi della posizione debitoria, strategie di recupero e tutela nelle fasi stragiudiziali e giudiziali.</p>
-            <a class="area-link" href="#contatti">Chiedi una valutazione</a>
-          </article>
-
-          <article class="area-card">
-            <h3>Diritto di famiglia e volontaria giurisdizione</h3>
-            <p>Gestione dei rapporti familiari e tutela dei soggetti fragili con approccio equilibrato e rigoroso.</p>
-            <a class="area-link" href="#contatti">Contatta lo studio</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="metodo">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-kicker">Metodo di lavoro</span>
-          <h2 class="serif">Un percorso chiaro, dall’analisi preliminare alla tutela concreta</h2>
-          <p>Cosa facciamo e come lo facciamo, con una sequenza comprensibile e rassicurante per il cliente.</p>
-        </div>
-
-        <div class="method-grid">
-          <article class="method-card">
-            <div class="num">1</div>
-            <h3>Analisi preliminare</h3>
-            <p>Esame del caso, analisi della documentazione e individuazione degli obiettivi da raggiungere.</p>
-          </article>
-
-          <article class="method-card">
-            <div class="num">2</div>
-            <h3>Strategia legale</h3>
-            <p>Valutazione del percorso più efficace, attraverso l’individuazione delle possibili strategie di tutela nella fase stragiudiziale o giudiziale.</p>
-          </article>
-
-          <article class="method-card">
-            <div class="num">3</div>
-            <h3>Chiarezza</h3>
-            <p>Informazioni chiare su tempi, passaggi e possibili esiti dell’attività professionale.</p>
-          </article>
-
-          <article class="method-card">
-            <div class="num">4</div>
-            <h3>Tutela concreta</h3>
-            <p>Ogni attività è orientata a proteggere in modo serio e consapevole gli interessi del cliente.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-tight" id="faq">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-kicker">Domande frequenti</span>
-          <h2 class="serif">Informazioni utili prima del contatto</h2>
-          <p>Le FAQ aiutano chi visita il sito a orientarsi subito e a capire come contattare lo studio.</p>
-        </div>
-
-        <div class="faq-grid">
-          <article class="faq-item">
-            <h3>Come richiedere un appuntamento?</h3>
-            <p>Puoi contattare lo studio tramite telefono, email o PEC per richiedere un primo appuntamento o una prima valutazione della questione.</p>
-          </article>
-
-          <article class="faq-item">
-            <h3>Lo studio assiste anche imprese?</h3>
-            <p>Sì, lo Studio presta assistenza anche a professionisti, attività commerciali e società, in particolare in materia contrattuale e commerciale.</p>
-          </article>
-
-          <article class="faq-item">
-            <h3>È possibile ricevere assistenza da remoto?</h3>
-            <p>Sì, per molte attività di consulenza e revisione documentale è possibile operare anche a distanza, previo invio della documentazione utile.</p>
-          </article>
-
-          <article class="faq-item">
-            <h3>Quali documenti portare al primo incontro?</h3>
-            <p>È utile portare tutti i documenti rilevanti: contratti, comunicazioni, diffide, email, fatture, verbali o altri atti relativi alla vicenda.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="contatti">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-kicker">Contatti</span>
-          <h2 class="serif">Richiedi una prima valutazione</h2>
-          <p>I recapiti devono essere immediati, leggibili e ordinati, con una sezione finale che accompagni naturalmente al contatto.</p>
-        </div>
-
-        <div class="contact-grid">
-          <article class="contact-card">
-            <h3>Recapiti dello studio</h3>
-            <ul class="contact-list">
-              <li><strong>Telefono:</strong> +39 328 928 1558</li>
-              <li><strong>Email:</strong> vincenzocallari@gmail.com</li>
-              <li><strong>PEC:</strong> vincenzo.callari@cert.avvocatitermini.it</li>
-              <li><strong>Studio:</strong> Vicolo Culotta, 3 – Cefalù (PA)</li>
-              <li><strong>Ricevimento:</strong> su appuntamento</li>
-            </ul>
-          </article>
-
-          <article class="contact-card">
-            <h3>Richiedi un primo contatto</h3>
-            <ul class="contact-list">
-              <li>Telefono per appuntamenti e prime informazioni</li>
-              <li>Email per richieste e invio documentazione</li>
-              <li>PEC per comunicazioni formali</li>
-            </ul>
-            <p style="margin-top:18px;">Per richieste di informazioni o per fissare un appuntamento è possibile utilizzare i recapiti sopra indicati.</p>
-            <div class="contact-actions">
-              <a class="btn" href="mailto:vincenzocallari@gmail.com">Scrivi una email</a>
-              <a class="btn-secondary" href="tel:+393289281558">Chiama ora</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-inner">
-      <strong>Studio Legale Vincenzo Callari</strong>
-      <div>Vicolo Culotta, 3 – Cefalù (PA) · Email: vincenzocallari@gmail.com · PEC: vincenzo.callari@cert.avvocatitermini.it</div>
-      <div><a href="#">Privacy Policy</a></div>
-    </div>
-  </footer>
-</body>
-</html>
+    /* ── FOOTER ────────────────────────────────────── */
+    footer {
+      background: var(--
