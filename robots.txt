@@ -1,0 +1,8 @@
+# robots.txt — Studio Legale Callari
+# https://avvocatocallari.it
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://avvocatocallari.it/sitemap.xml
