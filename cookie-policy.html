@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cookie Policy | Studio Legale Callari</title>
+  <meta name="description" content="Cookie Policy del sito dello Studio Legale Callari, Avvocato a Cefalù." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://avvocatocallari.it/cookie-policy.html" />
+  <link rel="icon" type="image/png" href="logo-callari-lawfirm.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink:      #0e1117;
+      --ink-2:    #3a3f4a;
+      --ink-3:    #7a8190;
+      --gold:     #9e7c3f;
+      --gold-mid: #b8935a;
+      --gold-l:   #f5ede0;
+      --gold-ll:  #faf5ee;
+      --navy:     #14213d;
+      --line:     #e4e7ed;
+      --line-warm:#e8e2d9;
+      --bg:       #fdfcfa;
+      --bg-off:   #f7f4ef;
+      --max:      900px;
+    }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Lato', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--gold); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap {
+      width: min(var(--max), 100% - 48px);
+      margin-inline: auto;
+    }
+
+    /* HEADER */
+    header {
+      position: sticky; top: 0; z-index: 90;
+      background: rgba(253,252,250,.97);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line-warm);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100px;
+      gap: 32px;
+    }
+    .brand a { display: flex; align-items: center; text-decoration: none; }
+    .brand img { height: 68px; width: auto; display: block; }
+    .nav-links { display: flex; gap: 4px; list-style: none; }
+    .nav-links a {
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      transition: color .2s, background .2s;
+    }
+    .nav-links a:hover { color: var(--navy); background: var(--gold-ll); text-decoration: none; }
+
+    /* CONTENT */
+    .privacy-hero {
+      background: var(--navy);
+      padding: 72px 0 56px;
+      text-align: center;
+      color: #fff;
+    }
+    .privacy-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 400;
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 12px;
+    }
+    .privacy-hero p {
+      color: rgba(255,255,255,.7);
+      font-size: .95rem;
+      max-width: 60ch;
+      margin: 0 auto;
+    }
+
+    main {
+      padding: 64px 0 80px;
+    }
+
+    main h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: var(--navy);
+      margin: 40px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--line-warm);
+    }
+    main h2:first-of-type { margin-top: 0; }
+
+    main p, main li {
+      color: var(--ink-2);
+      font-size: 1rem;
+      line-height: 1.85;
+    }
+    main p { margin-bottom: 14px; }
+    main ul, main ol { margin: 12px 0 18px 24px; }
+    main li { margin-bottom: 6px; }
+
+    .data-block {
+      background: var(--bg-off);
+      border: 1px solid var(--line-warm);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin: 16px 0 24px;
+      font-size: .95rem;
+      line-height: 1.85;
+    }
+
+    .info-callout {
+      background: var(--gold-ll);
+      border-left: 3px solid var(--gold-mid);
+      border-radius: 4px;
+      padding: 18px 22px;
+      margin: 20px 0;
+      font-size: .95rem;
+    }
+    .info-callout strong {
+      color: var(--navy);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: .92rem;
+    }
+    table th, table td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--line-warm);
+    }
+    table th {
+      background: var(--bg-off);
+      font-weight: 700;
+      color: var(--navy);
+      font-size: .8rem;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .last-update {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line-warm);
+      font-size: .85rem;
+      color: var(--ink-3);
+      font-style: italic;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0a0e18;
+      color: rgba(255,255,255,.35);
+      padding: 44px 0;
+      font-size: .82rem;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .footer-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      color: rgba(255,255,255,.65);
+      margin-bottom: 4px;
+    }
+    .footer-links { display: flex; gap: 20px; flex-wrap: wrap; }
+    .footer-links a { color: rgba(255,255,255,.35); transition: color .2s; }
+    .footer-links a:hover { color: var(--gold-mid); text-decoration: none; }
+    footer p { line-height: 1.75; margin-bottom: 4px; }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+      .privacy-hero { padding: 56px 0 40px; }
+      main { padding: 40px 0 56px; }
+      table { font-size: .85rem; }
+      table th, table td { padding: 10px 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="wrap nav-inner">
+    <div class="brand">
+      <a href="/">
+        <img src="logo-callari-lawfirm.png" alt="Studio Legale Callari" />
+      </a>
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="/#studio">Studio</a></li>
+        <li><a href="/#servizi">Attività</a></li>
+        <li><a href="/#metodo">Metodo</a></li>
+        <li><a href="/#lawpills">Law Pills</a></li>
+        <li><a href="/#contatti">Contatti</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="privacy-hero">
+  <div class="wrap">
+    <h1>Cookie Policy</h1>
+    <p>Informativa sull'utilizzo dei cookie ai sensi del Provvedimento del Garante per la protezione dei dati personali del 10 giugno 2021 e degli artt. 13 e 122 del Codice Privacy.</p>
+  </div>
+</section>
+
+<!-- CONTENT -->
+<main>
+  <div class="wrap">
+
+    <div class="info-callout">
+      <strong>In sintesi:</strong> il presente sito utilizza esclusivamente cookie tecnici necessari al suo corretto funzionamento. Non vengono utilizzati cookie di profilazione né cookie di terze parti per finalità di marketing o tracciamento. Per questo motivo non viene visualizzato alcun banner di consenso ai cookie.
+    </div>
+
+    <h2>1. Cosa sono i cookie</h2>
+    <p>I cookie sono piccoli file di testo che i siti web visitati inviano al dispositivo dell'utente (computer, tablet, smartphone), dove vengono memorizzati per essere ritrasmessi al sito stesso alla successiva visita. I cookie sono utilizzati per diverse finalità: garantire il corretto funzionamento del sito, raccogliere informazioni statistiche, profilare l'utente per finalità pubblicitarie.</p>
+
+    <h2>2. Tipologie di cookie</h2>
+    <p>Secondo la normativa vigente, i cookie si distinguono principalmente in:</p>
+    <ul>
+      <li><strong>Cookie tecnici</strong>: necessari al corretto funzionamento del sito o per fornire un servizio espressamente richiesto dall'utente. Per questi cookie non è richiesto il consenso.</li>
+      <li><strong>Cookie di profilazione</strong>: utilizzati per ricostruire il profilo dell'utente al fine di inviare messaggi pubblicitari personalizzati. Per questi cookie è richiesto il consenso preventivo dell'utente.</li>
+      <li><strong>Cookie analitici</strong>: utilizzati per raccogliere informazioni sull'utilizzo del sito. Possono essere assimilati ai cookie tecnici se realizzati direttamente dal gestore del sito e utilizzati a fini statistici aggregati.</li>
+      <li><strong>Cookie di terze parti</strong>: installati da soggetti diversi dal gestore del sito visitato.</li>
+    </ul>
+
+    <h2>3. Cookie utilizzati dal presente sito</h2>
+    <p>Il sito <strong>avvocatocallari.it</strong> utilizza esclusivamente cookie tecnici di sessione, necessari al corretto funzionamento del sito e alla navigazione delle pagine. Tali cookie non raccolgono dati personali identificativi e vengono cancellati alla chiusura del browser.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Tipologia</th>
+          <th>Finalità</th>
+          <th>Durata</th>
+          <th>Consenso</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Cookie tecnici di sessione</td>
+          <td>Corretto funzionamento del sito e della navigazione</td>
+          <td>Durata della sessione</td>
+          <td>Non richiesto</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>4. Cookie di profilazione e di terze parti</h2>
+    <p>Il sito <strong>non utilizza</strong>:</p>
+    <ul>
+      <li>cookie di profilazione di alcun tipo;</li>
+      <li>cookie di terze parti per finalità di marketing o tracciamento;</li>
+      <li>strumenti di analisi del traffico (es. Google Analytics, Meta Pixel, ecc.);</li>
+      <li>plugin di social network che possano impostare cookie.</li>
+    </ul>
+    <p>Per questo motivo, ai sensi del Provvedimento del Garante del 10 giugno 2021, non viene visualizzato alcun banner di consenso ai cookie.</p>
+
+    <h2>5. Risorse caricate da server esterni</h2>
+    <p>Il sito utilizza il servizio <strong>Google Fonts</strong> per la visualizzazione di alcuni caratteri tipografici. Il caricamento dei font dai server di Google può comportare la trasmissione di alcuni dati tecnici (in particolare l'indirizzo IP del visitatore) verso server di Google LLC, anche al di fuori dell'Unione Europea. Tale trasferimento avviene nel rispetto delle garanzie previste dagli artt. 44 e seguenti del GDPR.</p>
+    <p>Per maggiori informazioni sull'utilizzo dei dati da parte di Google si rimanda alla Privacy Policy di Google: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></p>
+    <p>Il sito è inoltre ospitato sull'infrastruttura <strong>GitHub Pages</strong> di GitHub Inc., che può registrare alcuni dati di navigazione (log di accesso) per finalità di sicurezza e di funzionamento del servizio. Per maggiori informazioni: <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">Privacy Policy di GitHub</a>.</p>
+
+    <h2>6. Come gestire i cookie</h2>
+    <p>L'utente può in qualsiasi momento gestire le proprie preferenze relative ai cookie attraverso le impostazioni del proprio browser. Si segnala che la disabilitazione dei cookie tecnici potrebbe compromettere il corretto funzionamento del sito.</p>
+    <p>Di seguito i link alle istruzioni dei principali browser per la gestione dei cookie:</p>
+    <ul>
+      <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Google Chrome</a></li>
+      <li><a href="https://support.mozilla.org/it/kb/Gestione%20dei%20cookie" target="_blank" rel="noopener">Mozilla Firefox</a></li>
+      <li><a href="https://support.apple.com/it-it/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Safari</a></li>
+      <li><a href="https://support.microsoft.com/it-it/microsoft-edge/eliminare-i-cookie-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener">Microsoft Edge</a></li>
+    </ul>
+
+    <h2>7. Titolare del trattamento</h2>
+    <div class="data-block">
+      <strong>Avv. Vincenzo Callari</strong><br>
+      Vicolo Culotta n. 3 – 90015 Cefalù (PA)<br>
+      P.IVA: 06371600823<br>
+      Iscritto all'Albo degli Avvocati del Foro di Termini Imerese al n. 1891/2015<br>
+      Email: <a href="mailto:studio@avvocatocallari.it">studio@avvocatocallari.it</a><br>
+      PEC: <a href="mailto:vincenzo.callari@cert.avvocatitermini.it">vincenzo.callari@cert.avvocatitermini.it</a><br>
+      Telefono: <a href="tel:+393289281558">+39 328 928 1558</a>
+    </div>
+
+    <h2>8. Modifiche alla presente Cookie Policy</h2>
+    <p>Il Titolare si riserva il diritto di apportare modifiche alla presente Cookie Policy in qualsiasi momento, dandone comunicazione mediante pubblicazione sul presente sito. Si invita pertanto l'utente a consultare periodicamente questa pagina.</p>
+
+    <p>Per ulteriori informazioni sul trattamento dei dati personali si rimanda alla <a href="privacy.html">Privacy Policy</a>.</p>
+
+    <p class="last-update">Ultimo aggiornamento: 7 maggio 2026</p>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap footer-inner">
+    <div>
+      <div class="footer-brand">Studio Legale Callari</div>
+      <p>Vicolo Culotta n. 3 – 90015 Cefalù (PA)</p>
+      <p>Avv. Vincenzo Callari · P.IVA 06371600823</p>
+      <p>Iscritto all'Albo degli Avvocati del Foro di Termini Imerese n. 1891/2015</p>
+    </div>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="cookie-policy.html">Cookie Policy</a>
+      <a href="mailto:studio@avvocatocallari.it">Email</a>
+      <a href="tel:+393289281558">Telefono</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
