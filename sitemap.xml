@@ -4,14 +4,54 @@
   <!-- Pagina principale -->
   <url>
     <loc>https://avvocatocallari.it/</loc>
-    <lastmod>2026-05-07</lastmod>
+    <lastmod>2026-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+  </url>
+
+  <!-- Indice Law Pills -->
+  <url>
+    <loc>https://avvocatocallari.it/law-pills.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Law Pill: Decreto ingiuntivo -->
+  <url>
+    <loc>https://avvocatocallari.it/pillole/cliente-non-paga-decreto-ingiuntivo.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Law Pill: Caparra -->
+  <url>
+    <loc>https://avvocatocallari.it/pillole/caparra-confirmatoria-penitenziale.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Law Pill: Amministratore S.r.l. -->
+  <url>
+    <loc>https://avvocatocallari.it/pillole/amministratore-srl-responsabilita-personale.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <!-- Privacy Policy -->
   <url>
     <loc>https://avvocatocallari.it/privacy.html</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Cookie Policy -->
+  <url>
+    <loc>https://avvocatocallari.it/cookie-policy.html</loc>
     <lastmod>2026-05-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
